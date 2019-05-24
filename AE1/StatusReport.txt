@@ -1,0 +1,14 @@
+course: Computer Architecture
+exercise: 1
+date: 2018-11-08
+author: Uddeshya Sinha,  2397282S
+author: Peiqi Yu, 2358806Y
+Both Versions of the exercise are completed, compiled and successfully executed.
+Both parts work correctly. We have used a test data set to confirm the desired functioning of both the versions.
+Problems faced:
+1) Haskell gives a lot of indentation errors even if the comments are not indented which could be frustating sometimes.
+2) Haskell auto-correct is not always helpful.
+3) Haskell online documentation and relevant materials are very abstruse which makes it difficult to analyze the next steps
+if we get stuck.
+
+Further comments could be found in the code.
