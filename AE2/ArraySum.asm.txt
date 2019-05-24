@@ -1,0 +1,30 @@
+       lea   R1,1[R0]          ; R1 = constant 1
+       load  R2,n[R0]          ; R2 = n
+       lea   R3,1[R0]          ; R3 = i = 1
+       load  R4,x[R0]          ; R4 = max = x[0]
+
+; Top of loop, determine whether to remain in loop
+
+loop
+       cmplt R5,R3,R2          ; R5 = (i<n)
+       jumpf R5,done[R0]       ; if i>=n then goto done
+
+; if x[i] > max
+
+       loadxi  R6,x[R3]          ; R6 = x[i]
+       add     R4,R4,R6       ; sum = sum + x[i]
+	   add     R0,R0,R0       ; i = i + 1 Does nothing!
+	   jump    loop[R0]    ; if n>1 jump to start of loop
+
+done   store R4,sum[R0]        ; max = R4
+       trap  R0,R0,R0          ; terminate
+
+; Data area
+n        data   6
+sum      data   0
+x        data  8
+         data   -3
+         data  67
+         data  -28
+         data   1
+         data  34
